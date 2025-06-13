@@ -20,7 +20,7 @@ export async function queryCards(query: string): Promise<string> {
       "https://router.huggingface.co/featherless-ai/v1/completions",
       {
         headers: {
-          Authorization: "Bearer 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",
+          Authorization: `Bearer ${process.env.HUGGING_FACE_TOKEN}`,
           "Content-Type": "application/json",
         },
         method: "POST",
